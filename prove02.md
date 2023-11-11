@@ -5,11 +5,11 @@ file completed or uncompleted in a public file sharing site.
 
 **Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or another editor if desired) to see the formatting, tables, and mathematical formula properly rendered.  If you need to write code, then first test your code in a separate file and then copy the code into this document using code fences. 
 
-**Name**:
+**Name**: obe megargel
 
-**Section**:
+**Section**: CSE 280
 
-**Teacher**:
+**Teacher**: Brother Macbeth
 
 ## Question 1 (7 points)
 
@@ -21,14 +21,14 @@ $B : \neg (p \land q \land r)$
 
 |$p$|$q$|$r$|$q \land r$|$\neg (q \land r)$|$A: p \to \neg (q \land r)$|$p \land q \land r$|$B: \neg (p \land q \land r)$|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|T|T|T||||||
-|T|T|F||||||
-|T|F|T||||||
-|T|F|F||||||
-|F|T|T||||||
-|F|T|F||||||
-|F|F|T||||||
-|F|F|F||||||
+|T|T|T|T|F|F|T|F|
+|T|T|F|F|T|T|F|T|
+|T|F|T|F|T|T|F|T|
+|T|F|F|F|T|T|F|T|
+|F|T|T|T|F|T|F|T|
+|F|T|F|F|T|T|F|T|
+|F|F|T|F|T|T|F|T|
+|F|F|F|F|T|T|F|T|
 
 ## Question 2 (8 points)
 
@@ -44,14 +44,14 @@ express the following propositions in English senteneces (the first two are done
 |-|-|
 |$\exists x \ P(x)$|There exists a person who is older than 21.|
 |$\forall x \ P(x)$|All people are older than 21.|
-|$\exists x \ \neg P(x)$||
-|$\forall x \ \neg P(x)$||
-|$\exists x \ S(x)$||
-|$\forall x \ S(x)$||
-|$\neg \exists x \ S(x)$||
-|$\exists x \ \neg S(x)$||
-|$\neg \forall x \ \neg S(x)$||
-|$\forall x \ \neg S(x)$||
+|$\exists x \ \neg P(x)$|There exists a person who is not older than 21.|
+|$\forall x \ \neg P(x)$|All people are not older than 21.|
+|$\exists x \ S(x)$|There is a student.|
+|$\forall x \ S(x)$|All people are students.|
+|$\neg \exists x \ S(x)$|There is not a student at all.|
+|$\exists x \ \neg S(x)$|There exists someone who is not a student.|
+|$\neg \forall x \ \neg S(x)$|Not all people are not students.|
+|$\forall x \ \neg S(x)$|All people are not students.|
 
 ## Question 3 (6 points)
 
@@ -78,12 +78,12 @@ identify which of the following english sentences match to each proposition (the
 |Proposition|English Sentence|
 |-|-|
 |$\forall x \ (F(x) \to C(x))$|All of my friends are cool.|
-|$\exists x \ (F(x) \land C(x))$||
-|$\forall x \ (F(x) \land C(x))$||
-|$\exists x \ (F(x) \to C(x))$||
-|$\forall x \ (S(x) \to N(x))$||
-|$\forall x \ (S(x) \land N(x))$||
-|$\exists x \ (S(x) \land N(x))$||
+|$\exists x \ (F(x) \land C(x))$|There exists someone who is a friend and who is cool.|
+|$\forall x \ (F(x) \land C(x))$|All people are my friend and are cool.|
+|$\exists x \ (F(x) \to C(x))$|There are peole who are cool because they are my friend.|
+|$\forall x \ (S(x) \to N(x))$|All Students are form Nepal.|
+|$\forall x \ (S(x) \land N(x))$|All people are Students and form Nepal.|
+|$\exists x \ (S(x) \land N(x))$|Som people are students and are from Nepal.|
 
 ## Question 4 (8 points)
 
@@ -91,14 +91,14 @@ Evaluate the following propositions to be True or False given that the domain of
 
 |Proposition|True or False|
 |-|-|
-|$\forall x \ (x \text{ is odd})$||
-|$\exists x \ (x \text{ is odd})$||
-|$\forall x \ (x \text{ is negative})$||
-|$\exists x \ (x \text{ is negative})$||
-|$\forall x \ (x^2 \ge 0)$||
-|$\exists x \ (x^2 \ge 0)$||
-|$\exists x \ (x + x = 1)$||
-|$\exists x \ (x + 2 = 1)$||
+|$\forall x \ (x \text{ is odd})$|False|
+|$\exists x \ (x \text{ is odd})$|True|
+|$\forall x \ (x \text{ is negative})$|False|
+|$\exists x \ (x \text{ is negative})$|True|
+|$\forall x \ (x^2 \ge 0)$|True|
+|$\exists x \ (x^2 \ge 0)$|True|
+|$\exists x \ (x + x = 1)$|True|
+|$\exists x \ (x + 2 = 1)$|True|
 
 ## Question 5 (10 points)
 
@@ -107,17 +107,90 @@ Negate each of the following logical statements by adding a negation symbol $\ne
 |Predicate|$\neg$ Predicate|
 |:-:|:-:|
 |$\forall x \forall y \ P(x,y)$|$\exists x \exists y \ \neg P(x,y)$|
-|$\exists x \forall y \ P(x,y)$||
-|$\exists x \exists y \forall z \ \neg P(x,y,z)$||
-|$\forall x \exists y \forall z \ P(x,y,z)$||
-|$\exists x \exists y \ (P(x,y) \land Q(x,y))$||
-|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$||
+|$\exists x \forall y \ P(x,y)$|$\forall x \exists x \neg P(x,y)$|
+|$\exists x \exists y \forall z \ \neg P(x,y,z)$|$\forall x \forall y \exists z P(x,y,z) $|
+|$\forall x \exists y \forall z \ P(x,y,z)$|$\exists x \forall x \exists z \neg P(x,y,z)$|
+|$\exists x \exists y \ (P(x,y) \land Q(x,y))$|$ \forall x \forall y (\neg P(x,y) \lor \neg Q(x,y))$|
+|$\forall x \forall y \exists z \ (P(x,y) \to Q(y,z))$|$ \exist x \exist y \forall z (P(x,y) \land \neg Q(x,y))$|
 
 ## Question 6 (11 points)
 
 The following code provides several predicates (`is_even`, `is_natural`, and `is_palindrome`).  There are multiple test cases that will determine whether the quantifier proposition is True or False given the specified domain.  You need to implement the `forall` and `exists` functions.  Hint: You will need to loop through all the items in the `domain` (which is a list) and use the `predicate` (which is a function) to test all or some of the values in the `domain`.
 
 ```python
+
+def is_even(x):
+    return x % 2 == 0
+
+def is_natural(x):
+    return x > 0
+
+def is_palindrome(x):
+    return x == x[::-1]
+
+def in_unit_circle(point):
+    return (point[0]**2 + point[1]**2) <= 1
+
+def forall(predicate, domain):
+    print(f"\u2200x ({predicate.__name__}) domain={domain}")
+    works = True
+    # Add your code here to return True or False
+    for i in domain:
+        if predicate in domain:
+            works = True
+        else:
+            works = False
+    return works
+
+def exists(predicate, domain):
+    print(f"\u2203x ({predicate.__name__}) domain={domain}")
+    # Add your code here to return True or False
+    works = False
+    for i in domain:
+        if predicate in domain:
+            works = True
+    return works
+
+numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(forall(is_even,numbers1)) # False
+print(exists(is_even,numbers1)) # True
+print("================================")
+print(forall(is_natural,numbers1)) # True
+print(exists(is_natural,numbers1)) # True
+print("================================")
+
+numbers2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(forall(is_natural,numbers2)) # False
+print(exists(is_natural,numbers2)) # True
+
+print("================================")
+words1 = ['civic', 'rotor', 'apple']
+print(forall(is_palindrome,words1)) # False
+print(exists(is_palindrome,words1)) # True
+print("================================")
+
+words2 = ['racecar', 'madam', '123454321']
+print(forall(is_palindrome,words2)) # True
+print(exists(is_palindrome,words2)) # True
+print("================================")
+
+words3 = ['no', 'palindromes', 'here']
+print(forall(is_palindrome,words3)) # False
+print(exists(is_palindrome,words3)) # False
+print("================================")
+
+points1 = [(0.5,0.5), (-1,0), (-0.75,-0.3)]
+print(forall(in_unit_circle,points1)) # True
+print(exists(in_unit_circle,points1)) # True
+print("================================")
+
+points2 = [(0.25,-1), (0.9,1.1), (0.1,-0.1)]
+print(forall(in_unit_circle,points2)) # False
+print(exists(in_unit_circle,points2)) # True
+```
+
+
+
 def is_even(x):
     return x % 2 == 0
 
@@ -133,6 +206,8 @@ def in_unit_circle(point):
 def forall(predicate, domain):
     print(f"\u2200x ({predicate.__name__}) domain={domain}")
     # Add your code here to return True or False
+    for i in domain:
+        
 
 def exists(predicate, domain):
     print(f"\u2203x ({predicate.__name__}) domain={domain}")
@@ -174,4 +249,3 @@ print("================================")
 points2 = [(0.25,-1), (0.9,1.1), (0.1,-0.1)]
 print(forall(in_unit_circle,points2)) # False
 print(exists(in_unit_circle,points2)) # True
-```
